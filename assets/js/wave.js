@@ -1,16 +1,28 @@
 /* ============================================================
    DRIVE MEDIA SAS — Three.js Dotted Wave Background
-   Loads on desktop only (width >= 768). Requires Three.js.
+   Full-viewport fixed layer; mobile uses a lighter particle grid.
    ============================================================ */
 (function () {
-  if (window.innerWidth < 768) return;
-
-  var AMOUNTX    = 40;
-  var AMOUNTY    = 60;
+  var AMOUNTX;
+  var AMOUNTY;
   var SEPARATION = 150;
+
+  function getGridDims() {
+    if (window.innerWidth < 480) {
+      return { ax: 18, ay: 28 };
+    }
+    if (window.innerWidth < 768) {
+      return { ax: 24, ay: 36 };
+    }
+    return { ax: 40, ay: 60 };
+  }
 
   function init() {
     if (typeof THREE === 'undefined') return;
+
+    var dims = getGridDims();
+    AMOUNTX = dims.ax;
+    AMOUNTY = dims.ay;
 
     /* --- Renderer ---------------------------------------- */
     var renderer = new THREE.WebGLRenderer({ alpha: true, antialias: false });
@@ -23,7 +35,6 @@
     canvas.setAttribute('aria-hidden', 'true');
     document.body.insertBefore(canvas, document.body.firstChild);
 
-    /* Make body transparent so the fixed canvas shows through */
     document.body.style.background = 'transparent';
 
     /* --- Scene & Camera ---------------------------------- */
@@ -50,9 +61,9 @@
 
     var material = new THREE.PointsMaterial({
       color:          0x89D9F8,
-      size:           4,
+      size:           window.innerWidth < 768 ? 3 : 4,
       transparent:    true,
-      opacity:        0.35,
+      opacity:        window.innerWidth < 768 ? 0.28 : 0.35,
       sizeAttenuation: true
     });
 
@@ -86,17 +97,12 @@
 
     /* --- Resize ------------------------------------------ */
     window.addEventListener('resize', function () {
-      if (window.innerWidth < 768) {
-        canvas.style.display = 'none';
-        return;
-      }
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
     });
   }
 
-  /* Load Three.js from CDN then initialise */
   if (typeof THREE !== 'undefined') {
     init();
   } else {

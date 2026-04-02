@@ -146,17 +146,75 @@
 
       if (!valid) return;
 
-      // Success state
-      form.style.opacity = '0';
-      form.style.transition = 'opacity 0.4s';
-      setTimeout(function () {
-        form.style.display = 'none';
-        const success = document.querySelector('.form-success');
-        if (success) {
-          success.classList.add('visible');
-          success.style.animation = 'fadeUp 0.6s var(--ease-out) both';
-        }
-      }, 400);
+      var errBanner = document.querySelector('.form-send-error');
+      if (errBanner) {
+        errBanner.hidden = true;
+        errBanner.textContent = '';
+      }
+
+      var submitBtn = form.querySelector('[type="submit"]');
+      var originalLabel = submitBtn ? submitBtn.textContent : '';
+
+      function showSuccess() {
+        form.style.opacity = '0';
+        form.style.transition = 'opacity 0.4s';
+        setTimeout(function () {
+          form.style.display = 'none';
+          var success = document.querySelector('.form-success');
+          if (success) {
+            success.classList.add('visible');
+            success.style.animation = 'fadeUp 0.6s var(--ease-out) both';
+          }
+        }, 400);
+      }
+
+      var nombre = form.querySelector('[name="nombre"]');
+      var email = form.querySelector('[name="email"]');
+      var mensaje = form.querySelector('[name="mensaje"]');
+      var empresa = form.querySelector('[name="empresa"]');
+
+      var payload = {
+        name: nombre && nombre.value.trim(),
+        email: email && email.value.trim(),
+        message: mensaje && mensaje.value.trim(),
+        empresa: empresa && empresa.value.trim(),
+        _subject: 'Contacto — Drive Media (drive-media-web)',
+        _replyto: email && email.value.trim(),
+        _template: 'table',
+        _captcha: false
+      };
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando…';
+      }
+
+      fetch('https://formsubmit.co/ajax/info@drivemediadj.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error('Network');
+          showSuccess();
+        })
+        .catch(function () {
+          var errEl = document.querySelector('.form-send-error');
+          if (errEl) {
+            errEl.hidden = false;
+            errEl.textContent =
+              'No se pudo enviar desde el navegador. Escríbenos a info@drivemediadj.com';
+          }
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalLabel;
+          }
+        });
     });
 
     // Live clear error on input
