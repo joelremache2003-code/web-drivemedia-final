@@ -2372,3 +2372,23 @@ html {
   .spinning-badge { width: 128px; height: 128px; }
   .spinning-badge-center img { width: 52px; height: 52px; }
 }
+/* ARREGLO CRÍTICO LOGO DRIVE MEDIA */
+.header-logo, 
+.header-logo img, 
+.logo-container,
+header a {
+    background-color: transparent !important; /* Quita el fondo negro */
+    background: transparent !important;
+}
+
+.header-logo img {
+    height: 60px !important; /* Ajusta este número si lo quieres más grande */
+    width: auto !important;
+    display: block !important;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.2)); /* Le da un toque pro al cromo */
+}
+
+/* Arreglo del Badge de Quito */
+.badge-text {
+    text-transform: uppercase;
+}
