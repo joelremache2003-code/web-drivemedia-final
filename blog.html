@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Blog de DRIVE MEDIA SAS — Perspectivas sobre IA, automatización y tecnología institucional en Ecuador." />
+  <title>Blog — DRIVE MEDIA SAS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header>
+    <nav class="nav nav-opaque" aria-label="Navegación principal">
+      <a href="index.html" class="nav-logo" aria-label="DRIVE MEDIA SAS — Inicio">
+        <img src="assets/img/emblem.png" alt="DRIVE MEDIA emblem" />
+        <div class="nav-wordmark">
+          <span class="drive">DRIVE</span>
+          <span class="media">MEDIA</span>
+          <span class="sas">SAS</span>
+        </div>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html" class="nav-cta">Contactar</a></li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="page-header-inner">
+      <span class="overline" style="animation: fadeUp 0.8s cubic-bezier(0.0,0.0,0.2,1) 0.1s both;">Perspectivas</span>
+      <h1 style="animation: fadeUp 0.8s cubic-bezier(0.0,0.0,0.2,1) 0.25s both;">Blog</h1>
+      <p class="page-subtitle" style="animation: fadeUp 0.8s cubic-bezier(0.0,0.0,0.2,1) 0.4s both;">
+        Análisis técnico sobre inteligencia artificial,<br>automatización y tecnología institucional.
+      </p>
+    </div>
+  </div>
+
+
+  <!-- FEATURED POST -->
+  <section class="content-section" style="padding-top: 0;">
+    <div class="container">
+
+      <article class="blog-featured-wrap">
+        <img
+          class="blog-featured-img"
+          src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&auto=format&fit=crop&q=80"
+          alt="Inteligencia Artificial aplicada a la gestión pública"
+        />
+        <div class="blog-featured-overlay">
+          <div>
+            <span class="blog-cat-pill pill-featured">Destacado</span>
+            <span class="blog-cat-pill pill-ia" style="margin-left: 8px;">IA &amp; Tecnología</span>
+          </div>
+          <h2 class="blog-featured-title">
+            Cómo la IA está transformando la gestión pública en Ecuador
+          </h2>
+          <p class="blog-featured-excerpt">
+            Las instituciones públicas ecuatorianas enfrentan un volumen creciente de trámites,
+            expedientes y decisiones que no pueden escalarse con personal. Los modelos de IA
+            aplicados a flujos administrativos reducen tiempos de resolución hasta en un 60%
+            sin sacrificar trazabilidad ni control institucional.
+          </p>
+          <div class="blog-featured-meta">
+            <span>15 Mar 2026</span>
+            <span aria-hidden="true">·</span>
+            <span>8 min lectura</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- CATEGORY FILTERS -->
+  <section style="padding: 0 0 40px;">
+    <div class="container">
+      <div class="blog-filters-wrap">
+        <div class="blog-filters" role="group" aria-label="Filtrar por categoría">
+          <button class="filter-pill active" data-filter="todos">Todos</button>
+          <button class="filter-pill" data-filter="ia">IA &amp; Tecnología</button>
+          <button class="filter-pill" data-filter="economia">Economía</button>
+          <button class="filter-pill" data-filter="cripto">Cripto</button>
+          <button class="filter-pill" data-filter="musica">Música &amp; DJ</button>
+          <button class="filter-pill" data-filter="negocios">Negocios</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ARTICLE GRID -->
+  <section class="content-section" style="padding-top: 0; padding-bottom: var(--pad-y);">
+    <div class="container">
+
+      <div class="blog-grid-editorial" id="blog-grid">
+
+        <!-- Card 01 — IA -->
+        <article class="blog-card-editorial reveal" data-category="ia">
+          <div class="blog-card-thumb-wrap">
+            <img
+              class="blog-card-thumb"
+              src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&auto=format&fit=crop&q=80"
+              alt="Automatización con IA"
+              loading="lazy"
+            />
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-cat-pill pill-ia">IA &amp; Tecnología</span>
+            <h3>Automatización sin fricción: el caso del sector salud</h3>
+            <p class="blog-card-excerpt">
+              El sector salud genera datos en volúmenes que ningún equipo humano puede procesar
+              en tiempo real. La automatización de protocolos clínicos — admisiones, agendamiento,
+              alertas tempranas — libera al personal para decisiones críticas.
+            </p>
+            <div class="blog-card-meta">
+              <span>08 Mar 2026</span>
+              <span aria-hidden="true">·</span>
+              <span>6 min</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 02 — Economía -->
+        <article class="blog-card-editorial reveal reveal-delay-1" data-category="economia">
+          <div class="blog-card-thumb-wrap">
+            <img
+              class="blog-card-thumb"
+              src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&auto=format&fit=crop&q=80"
+              alt="Economía digital Ecuador"
+              loading="lazy"
+            />
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-cat-pill pill-economia">Economía</span>
+            <h3>Transformación digital en Ecuador: dónde estamos realmente</h3>
+            <p class="blog-card-excerpt">
+              Un análisis honesto del estado de la transformación digital en el sector privado
+              y público ecuatoriano. Brechas estructurales, oportunidades reales y el rol que
+              la tecnología aplicada puede jugar en los próximos 36 meses.
+            </p>
+            <div class="blog-card-meta">
+              <span>01 Mar 2026</span>
+              <span aria-hidden="true">·</span>
+              <span>7 min</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 03 — Cripto -->
+        <article class="blog-card-editorial reveal reveal-delay-2" data-category="cripto">
+          <div class="blog-card-thumb-wrap">
+            <img
+              class="blog-card-thumb"
+              src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=80"
+              alt="Blockchain y cripto"
+              loading="lazy"
+            />
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-cat-pill pill-cripto">Cripto</span>
+            <h3>Blockchain en la trazabilidad de contratos públicos</h3>
+            <p class="blog-card-excerpt">
+              La corrupción en contratación pública no se combate con más auditores. Se combate
+              con infraestructura que hace imposible la manipulación retroactiva. Las arquitecturas
+              blockchain ofrecen trazabilidad inmutable y auditoría automática.
+            </p>
+            <div class="blog-card-meta">
+              <span>22 Feb 2026</span>
+              <span aria-hidden="true">·</span>
+              <span>9 min</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 04 — Música -->
+        <article class="blog-card-editorial reveal" data-category="musica">
+          <div class="blog-card-thumb-wrap">
+            <img
+              class="blog-card-thumb"
+              src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&auto=format&fit=crop&q=80"
+              alt="Música electrónica DJ"
+              loading="lazy"
+            />
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-cat-pill pill-musica">Música &amp; DJ</span>
+            <h3>Arquitectura sonora: construir un set como si fuera código</h3>
+            <p class="blog-card-excerpt">
+              El progressive house no se improvisa. Se arquitectura. La misma lógica detrás
+              de un sistema de automatización — flujo, tensión, resolución — aplica al diseño
+              de un set de dos horas. Una perspectiva técnica sobre el arte del mix.
+            </p>
+            <div class="blog-card-meta">
+              <span>15 Feb 2026</span>
+              <span aria-hidden="true">·</span>
+              <span>5 min</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 05 — Negocios -->
+        <article class="blog-card-editorial reveal reveal-delay-1" data-category="negocios">
+          <div class="blog-card-thumb-wrap">
+            <img
+              class="blog-card-thumb"
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&auto=format&fit=crop&q=80"
+              alt="Estrategia de negocios tecnología"
+              loading="lazy"
+            />
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-cat-pill pill-negocios">Negocios</span>
+            <h3>Por qué el 70% de los proyectos de IA fallan antes de escalar</h3>
+            <p class="blog-card-excerpt">
+              No es el modelo. No es el dato. Es la organización. La mayoría de iniciativas
+              de inteligencia artificial en empresas latinoamericanas se frenan en la misma
+              etapa: el paso de piloto a producción. Estas son las razones reales.
+            </p>
+            <div class="blog-card-meta">
+              <span>08 Feb 2026</span>
+              <span aria-hidden="true">·</span>
+              <span>8 min</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 06 — IA -->
+        <article class="blog-card-editorial reveal reveal-delay-2" data-category="ia">
+          <div class="blog-card-thumb-wrap">
+            <img
+              class="blog-card-thumb"
+              src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&auto=format&fit=crop&q=80"
+              alt="Inteligencia Artificial aplicada"
+              loading="lazy"
+            />
+          </div>
+          <div class="blog-card-body">
+            <span class="blog-cat-pill pill-ia">IA &amp; Tecnología</span>
+            <h3>Dashboards de Business Intelligence: más allá del gráfico bonito</h3>
+            <p class="blog-card-excerpt">
+              Un dashboard que no genera decisiones es decoración cara. Los sistemas de BI
+              reales integran datos en tiempo real, alertan anomalías automáticamente y
+              entregan el contexto correcto a la persona correcta en el momento correcto.
+            </p>
+            <div class="blog-card-meta">
+              <span>01 Feb 2026</span>
+              <span aria-hidden="true">·</span>
+              <span>6 min</span>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /blog-grid-editorial -->
+
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-col footer-col-left">
+      <p class="footer-copy">&copy; 2026 DRIVE MEDIA SAS<br>Quito, Ecuador.</p>
+    </div>
+    <nav class="footer-col footer-col-center" aria-label="Footer navigation">
+      <ul class="footer-nav">
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="footer-col footer-col-right">
+      <div class="footer-social">
+        <div class="footer-social-group">
+          <a href="https://linkedin.com/company/drive-media-sas" class="footer-social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://facebook.com/drivemediadj" class="footer-social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+        <div class="footer-social-sep" aria-hidden="true"></div>
+        <div class="footer-social-group">
+          <a href="https://instagram.com/drivemediadj" class="footer-social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://soundcloud.com/drivemediadj" class="footer-social-icon" aria-label="SoundCloud" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.56 8.87V17h8.76c1.49 0 2.68-1.2 2.68-2.68 0-1.49-1.2-2.68-2.68-2.68-.09 0-.19 0-.28.01C19.88 9.6 18.58 8.5 17 8.5c-.36 0-.7.06-1.03.17C15.4 7.09 14.02 6 12.37 6c-.34 0-.68.05-1 .15M10.18 9.17c-.15-.04-.31-.06-.47-.06-1.14 0-2.08.82-2.21 1.93C7.08 11.1 6.6 11.7 6.6 12.4c0 .82.67 1.49 1.49 1.49h2.09V9.17z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cursor.js"></script>
+  <script>
+    /* --- Blog category filter --------------------------------- */
+    (function () {
+      var pills  = document.querySelectorAll('.filter-pill');
+      var cards  = document.querySelectorAll('.blog-card-editorial');
+
+      pills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          var filter = this.getAttribute('data-filter');
+
+          /* update active pill */
+          pills.forEach(function (p) { p.classList.remove('active'); });
+          this.classList.add('active');
+
+          /* show / hide cards */
+          cards.forEach(function (card) {
+            var cat = card.getAttribute('data-category');
+            if (filter === 'todos' || cat === filter) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

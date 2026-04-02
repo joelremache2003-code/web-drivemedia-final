@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"/Users/emilioremache/Documents/Drive Media Web /assets/css\" \"/Users/emilioremache/Documents/Drive Media Web /assets/js\" \"/Users/emilioremache/Documents/Drive Media Web /assets/img/renders\" \"/Users/emilioremache/Documents/Drive Media Web /tmp/screenshots\" \"/Users/emilioremache/Documents/Drive Media Web /tools\" \"/Users/emilioremache/Documents/Drive Media Web /workflows\")",
+      "Bash(cp \"/Users/emilioremache/Documents/Drive Media Web /brand_assets/Drive Media Emblem.png\" \"/Users/emilioremache/Documents/Drive Media Web /assets/img/emblem.png\")",
+      "Bash(curl -s http://localhost:8743/)",
+      "Bash(pip3 list:*)",
+      "Bash(CHROME=\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" \"$CHROME\" --headless=new --disable-gpu --screenshot=\"/Users/emilioremache/Documents/Drive Media Web /tmp/screenshots/hero.png\" --window-size=1440,900 --hide-scrollbars http://localhost:8743/)",
+      "Bash(python3 tools/screenshot.py)",
+      "Bash(mkdir -p \"/Users/emilioremache/Documents/Drive Media Web /assets/presskit\")",
+      "Bash(touch \"/Users/emilioremache/Documents/Drive Media Web /assets/presskit/drive-media-dj-presskit.pdf\")",
+      "Bash(python3 -m http.server 8743)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8743/index.html)"
+    ]
+  }
+}
