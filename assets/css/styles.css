@@ -209,28 +209,32 @@ a {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  max-width: min(92vw, 420px);
+  gap: 12px;
+  max-width: min(94vw, 560px);
 }
 
+/* Logo horizontal: altura comparable a la línea de menú (caps ~12px → bloque visual ~14–18px; aquí damos presencia clara sin romper la barra) */
 .nav-logo-img {
-  height: clamp(26px, 4.2vw, 40px);
+  height: clamp(36px, 5.8vw, 52px);
   width: auto;
-  max-width: min(280px, 58vw);
+  max-width: min(440px, 68vw);
   display: block;
   object-fit: contain;
+  /* Fondo negro del PNG se funde con el header oscuro; el cromo/blanco sigue leyéndose */
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 12px rgba(137, 217, 248, 0.08));
 }
 
 .nav-logo-sas {
   font-family: 'DM Mono', monospace;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 400;
-  color: rgba(194, 194, 194, 0.42);
-  letter-spacing: 0.22em;
+  color: rgba(194, 194, 194, 0.55);
+  letter-spacing: 0.1em;
   line-height: 1;
   flex-shrink: 0;
-  position: relative;
-  top: 1px;
+  align-self: center;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -2238,10 +2242,12 @@ html {
 }
 
 .spinning-badge-center img {
-  width: 60px;
-  height: 60px;
+  width: 68px;
+  height: 68px;
   object-fit: contain;
-  opacity: 0.5;
+  opacity: 0.72;
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 0 8px rgba(137, 217, 248, 0.12));
 }
 
 @keyframes spin-badge {
@@ -2347,22 +2353,22 @@ html {
   }
 
   .nav-logo {
-    max-width: min(88vw, 340px);
+    max-width: min(90vw, 480px);
   }
 
   .nav-logo-img {
-    max-width: min(200px, 52vw);
-    height: 24px;
+    max-width: min(320px, 64vw);
+    height: clamp(30px, 7vw, 40px);
   }
 
   .nav-logo-sas {
-    font-size: 8px;
-    letter-spacing: 0.18em;
+    font-size: 9px;
+    letter-spacing: 0.08em;
   }
 }
 
 @media (max-width: 480px) {
   .badge-section { padding: 48px 0; }
   .spinning-badge { width: 128px; height: 128px; }
-  .spinning-badge-center img { width: 44px; height: 44px; }
+  .spinning-badge-center img { width: 52px; height: 52px; }
 }

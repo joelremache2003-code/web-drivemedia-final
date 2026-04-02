@@ -61,10 +61,10 @@
 
     var isMobile = window.innerWidth < 768;
     var material = new THREE.PointsMaterial({
-      color:          0x9FE8FF,
-      size:           isMobile ? 4.2 : 5.2,
+      color:          0x8FD4F5,
+      size:           isMobile ? 3.6 : 4.6,
       transparent:    true,
-      opacity:        isMobile ? 0.48 : 0.62,
+      opacity:        isMobile ? 0.36 : 0.48,
       sizeAttenuation: true
     });
 
@@ -99,8 +99,8 @@
     /* --- Resize ------------------------------------------ */
     window.addEventListener('resize', function () {
       var m = window.innerWidth < 768;
-      material.size = m ? 4.2 : 5.2;
-      material.opacity = m ? 0.48 : 0.62;
+      material.size = m ? 3.6 : 4.6;
+      material.opacity = m ? 0.36 : 0.48;
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
