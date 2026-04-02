@@ -209,43 +209,28 @@ a {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  max-width: min(92vw, 420px);
 }
 
-.nav-logo img {
-  height: 32px;
+.nav-logo-img {
+  height: clamp(26px, 4.2vw, 40px);
   width: auto;
+  max-width: min(280px, 58vw);
+  display: block;
+  object-fit: contain;
 }
 
-.nav-wordmark {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-
-.nav-wordmark .drive {
-  font-family: 'DM Mono', monospace;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--dm-white);
-  letter-spacing: 0.15em;
-}
-
-.nav-wordmark .media {
-  font-family: 'DM Mono', monospace;
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--dm-white);
-  letter-spacing: 0.15em;
-}
-
-.nav-wordmark .sas {
+.nav-logo-sas {
   font-family: 'DM Mono', monospace;
   font-size: 9px;
   font-weight: 400;
-  color: var(--dm-silver);
-  letter-spacing: 0.2em;
-  margin-top: 2px;
+  color: rgba(194, 194, 194, 0.42);
+  letter-spacing: 0.22em;
+  line-height: 1;
+  flex-shrink: 0;
+  position: relative;
+  top: 1px;
 }
 
 .nav-links {
@@ -2270,36 +2255,113 @@ html {
 }
 
 /* --- Globe (nosotros — Dónde estamos) ------------------- */
-.globe-wrap {
+.location-globe-section {
+  border-top: 1px solid rgba(194, 194, 194, 0.08);
+  background: rgba(10, 10, 11, 0.78);
+}
+
+.location-globe-stage {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto 72px;
+  justify-content: center;
+  min-height: min(70vh, 720px);
+  padding: 40px var(--pad-x) 48px;
   gap: 16px;
 }
 
-#globe-canvas {
+.globe-stage-inner {
+  position: relative;
+  width: min(92vw, 680px);
+  aspect-ratio: 1;
+  max-width: 680px;
+}
+
+.globe-stage-inner #globe-canvas {
   display: block;
+  position: relative;
+  z-index: 1;
+  width: 100% !important;
+  height: 100% !important;
   border-radius: 50%;
-  width: 400px !important;
-  height: 400px !important;
+  box-shadow:
+    0 0 60px rgba(137, 217, 248, 0.14),
+    0 0 100px rgba(207, 253, 15, 0.08),
+    inset 0 0 40px rgba(255, 255, 255, 0.03);
+}
+
+.globe-pulse-ring {
+  position: absolute;
+  inset: -3%;
+  border-radius: 50%;
+  border: 1px solid rgba(207, 253, 15, 0.28);
+  box-shadow: 0 0 48px rgba(137, 217, 248, 0.2);
+  animation: globe-ring-pulse 2.75s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes globe-ring-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.045);
+    opacity: 0.92;
+  }
 }
 
 .globe-label {
   font-family: 'DM Mono', monospace;
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 14px;
+  font-weight: 500;
   color: var(--dm-acid);
-  letter-spacing: 0.25em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
+}
+
+.globe-sublabel {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 400;
+  color: rgba(137, 217, 248, 0.5);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: -4px 0 0;
+}
+
+.location-globe-after {
+  padding-top: 40px;
+  padding-bottom: var(--pad-y);
+  border-top: 1px solid rgba(194, 194, 194, 0.06);
+}
+
+@media (max-width: 768px) {
+  .location-globe-stage {
+    min-height: min(58vh, 560px);
+    padding: 28px var(--pad-x) 36px;
+  }
+
+  .nav-logo {
+    max-width: min(88vw, 340px);
+  }
+
+  .nav-logo-img {
+    max-width: min(200px, 52vw);
+    height: 24px;
+  }
+
+  .nav-logo-sas {
+    font-size: 8px;
+    letter-spacing: 0.18em;
+  }
 }
 
 @media (max-width: 480px) {
-  #globe-canvas {
-    width: 280px !important;
-    height: 280px !important;
-  }
   .badge-section { padding: 48px 0; }
   .spinning-badge { width: 128px; height: 128px; }
   .spinning-badge-center img { width: 44px; height: 44px; }

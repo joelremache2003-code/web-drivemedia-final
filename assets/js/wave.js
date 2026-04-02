@@ -9,12 +9,12 @@
 
   function getGridDims() {
     if (window.innerWidth < 480) {
-      return { ax: 18, ay: 28 };
+      return { ax: 20, ay: 32 };
     }
     if (window.innerWidth < 768) {
-      return { ax: 24, ay: 36 };
+      return { ax: 28, ay: 40 };
     }
-    return { ax: 40, ay: 60 };
+    return { ax: 44, ay: 64 };
   }
 
   function init() {
@@ -59,11 +59,12 @@
     var geometry = new THREE.BufferGeometry();
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
 
+    var isMobile = window.innerWidth < 768;
     var material = new THREE.PointsMaterial({
-      color:          0x89D9F8,
-      size:           window.innerWidth < 768 ? 3 : 4,
+      color:          0x9FE8FF,
+      size:           isMobile ? 4.2 : 5.2,
       transparent:    true,
-      opacity:        window.innerWidth < 768 ? 0.28 : 0.35,
+      opacity:        isMobile ? 0.48 : 0.62,
       sizeAttenuation: true
     });
 
@@ -97,6 +98,9 @@
 
     /* --- Resize ------------------------------------------ */
     window.addEventListener('resize', function () {
+      var m = window.innerWidth < 768;
+      material.size = m ? 4.2 : 5.2;
+      material.opacity = m ? 0.48 : 0.62;
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
@@ -108,6 +112,7 @@
   } else {
     var s   = document.createElement('script');
     s.src   = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+    s.crossOrigin = 'anonymous';
     s.onload = init;
     document.head.appendChild(s);
   }

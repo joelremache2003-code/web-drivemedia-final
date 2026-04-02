@@ -16,12 +16,8 @@
   <header>
     <nav class="nav nav-opaque" aria-label="Navegación principal">
       <a href="index.html" class="nav-logo" aria-label="DRIVE MEDIA SAS — Inicio">
-        <img src="assets/img/emblem.png" alt="DRIVE MEDIA emblem" />
-        <div class="nav-wordmark">
-          <span class="drive">DRIVE</span>
-          <span class="media">MEDIA</span>
-          <span class="sas">SAS</span>
-        </div>
+        <img src="assets/img/drive-media-logo-full-white.png" alt="DRIVE MEDIA" class="nav-logo-img" width="1024" height="576" decoding="async" />
+        <span class="nav-logo-sas">S.A.S</span>
       </a>
       <ul class="nav-links" role="list">
         <li><a href="servicios.html">Servicios</a></li>
@@ -131,22 +127,26 @@
   </section>
 
 
-  <!-- DÓNDE ESTAMOS -->
-  <section class="content-section" id="donde">
+  <!-- DÓNDE ESTAMOS — globo protagonista -->
+  <section class="location-globe-section" id="donde">
     <div class="container">
-
       <div class="section-header">
         <span class="overline reveal">Ubicación</span>
         <div class="accent-line reveal reveal-delay-1"></div>
         <h2 class="reveal reveal-delay-2">Dónde estamos.</h2>
       </div>
+    </div>
 
-      <!-- Interactive Globe -->
-      <div class="globe-wrap reveal">
-        <canvas id="globe-canvas" width="400" height="400"></canvas>
-        <p class="globe-label">Quito, Ecuador</p>
+    <div class="location-globe-stage reveal">
+      <div class="globe-stage-inner">
+        <span class="globe-pulse-ring" aria-hidden="true"></span>
+        <canvas id="globe-canvas" width="420" height="420"></canvas>
       </div>
+      <p class="globe-label">Quito, Ecuador</p>
+      <p class="globe-sublabel">Pulso en tiempo real · Ecuador</p>
+    </div>
 
+    <div class="container location-globe-after">
       <div class="location-block">
 
         <div class="location-text reveal">
@@ -178,7 +178,6 @@
         </div>
 
       </div>
-
     </div>
   </section>
 
@@ -243,43 +242,6 @@
   <script src="assets/js/cursor.js"></script>
   <script src="assets/js/wave.js"></script>
 
-  <!-- cobe interactive globe -->
-  <script src="https://cdn.jsdelivr.net/npm/cobe@0.6.3/dist/cobe.umd.js"></script>
-  <script>
-  (function () {
-    var canvas = document.getElementById('globe-canvas');
-    if (!canvas || typeof createGlobe === 'undefined') return;
-
-    var phi     = 1.2;
-    var rotating = true;
-
-    var globe = createGlobe(canvas, {
-      devicePixelRatio: Math.min(window.devicePixelRatio, 2),
-      width:    400,
-      height:   400,
-      phi:      1.2,
-      theta:    0.1,
-      dark:     0,
-      diffuse:  1.35,
-      mapSamples:   16000,
-      mapBrightness: 1.15,
-      baseColor:   [0.94, 0.95, 0.96],
-      markerColor: [0.812, 0.992, 0.059],
-      glowColor:   [0.35, 0.55, 0.62],
-      markers: [
-        { location: [-1.8312, -78.1834], size: 0.085 }
-      ],
-      onRender: function (state) {
-        if (rotating) {
-          phi += 0.0045;
-        }
-        state.phi = phi;
-      }
-    });
-
-    canvas.addEventListener('mouseenter', function () { rotating = false; });
-    canvas.addEventListener('mouseleave', function () { rotating = true; });
-  })();
-  </script>
+  <script type="module" src="assets/js/globe-nosotros.js"></script>
 </body>
 </html>
