@@ -7,8 +7,12 @@
   <title>Nosotros — DRIVE MEDIA SAS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/img/Drive Media Emblem.png" />
+  <!-- GSAP for premium animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
@@ -26,6 +30,7 @@
         <li><a href="nosotros.html" class="active">Nosotros</a></li>
         <li><a href="contacto.html" class="nav-cta">Contactar</a></li>
       </ul>
+      <span id="quito-clock" aria-hidden="true"></span>
       <button class="nav-hamburger" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -36,7 +41,7 @@
   <!-- PAGE HEADER -->
   <div class="page-header">
     <div class="page-header-inner">
-      <span class="overline" style="animation: fadeUp 0.8s cubic-bezier(0.0,0.0,0.2,1) 0.1s both;">La empresa</span>
+      <span class="overline mono" style="animation: fadeUp 0.8s cubic-bezier(0.0,0.0,0.2,1) 0.1s both;"><span class="dot-accent"></span> La empresa</span>
       <h1 style="animation: fadeUp 0.8s cubic-bezier(0.0,0.0,0.2,1) 0.25s both;">Nosotros</h1>
       <p class="page-subtitle" style="animation: fadeUp 0.8s cubic-bezier(0.0,0.0,0.2,1) 0.4s both;">
         Construimos la infraestructura tecnológica que sostiene al Ecuador de los próximos diez años.
@@ -50,7 +55,7 @@
     <div class="container">
 
       <div class="section-header">
-        <span class="overline reveal">Identidad</span>
+        <span class="overline mono reveal"><span class="dot-accent"></span> Identidad</span>
         <div class="accent-line reveal reveal-delay-1"></div>
         <h2 class="reveal reveal-delay-2">Quiénes somos.</h2>
       </div>
@@ -84,7 +89,7 @@
     <div class="container">
 
       <div class="section-header">
-        <span class="overline reveal">Principios</span>
+        <span class="overline mono reveal"><span class="dot-accent"></span> Principios</span>
         <div class="accent-line reveal reveal-delay-1"></div>
         <h2 class="reveal reveal-delay-2">Cómo trabajamos.</h2>
       </div>
@@ -131,7 +136,7 @@
   <section class="location-globe-section" id="donde">
     <div class="container">
       <div class="section-header">
-        <span class="overline reveal">Ubicación</span>
+        <span class="overline mono reveal"><span class="dot-accent"></span> Ubicación</span>
         <div class="accent-line reveal reveal-delay-1"></div>
         <h2 class="reveal reveal-delay-2">Dónde estamos.</h2>
       </div>
@@ -187,7 +192,7 @@
     <div class="container">
       <div class="contact-cta-inner">
         <div class="contact-cta-text">
-          <span class="overline reveal">¿Trabajamos juntos?</span>
+          <span class="overline mono reveal"><span class="dot-accent"></span> ¿Trabajamos juntos?</span>
           <h2 class="reveal reveal-delay-1">Tu organización, próxima.</h2>
           <p class="reveal reveal-delay-2">
             Cuéntanos tu desafío. Diseñaremos la arquitectura exacta que necesitas.
@@ -205,6 +210,7 @@
   <footer class="footer">
     <div class="footer-col footer-col-left">
       <p class="footer-copy">&copy; 2026 DRIVE MEDIA S.A.S<br>Quito, Ecuador.</p>
+      <p class="footer-brand-quote">"El futuro es construido, no esperado."</p>
     </div>
     <nav class="footer-col footer-col-center" aria-label="Footer navigation">
       <ul class="footer-nav">
@@ -241,6 +247,7 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/cursor.js"></script>
   <script src="assets/js/wave.js"></script>
+  <script src="assets/js/premium.js"></script>
 
   <script type="module" src="assets/js/globe-nosotros.js"></script>
 </body>

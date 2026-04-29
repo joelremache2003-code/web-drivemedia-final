@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="DRIVE MEDIA DJ — Progressive House · Minimal · Techno. Press kit y mixes desde Quito, Ecuador." />
+  <meta name="description" content="DRIVE MEDIA DJ — Press Kit oficial. Progressive House · Minimal · Techno desde Quito, Ecuador." />
   <title>Music — DRIVE MEDIA DJ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/img/Drive Media Emblem.png" />
+  <!-- GSAP for premium animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
@@ -26,6 +30,7 @@
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="contacto.html" class="nav-cta">Contactar</a></li>
       </ul>
+      <span id="quito-clock" aria-hidden="true"></span>
       <button class="nav-hamburger" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -35,131 +40,264 @@
 
   <!-- HERO -->
   <section class="music-hero">
-    <div class="music-hero-bg" aria-hidden="true">
-      <img src="assets/img/Drive Media Logo Full White.png alt="" />
-    </div>
-
+    <div class="music-hero-bg" aria-hidden="true"></div>
     <div class="music-hero-content">
-      <span class="overline" style="animation: fadeUp 0.8s cubic-bezier(0.0,0.0,0.2,1) 0.1s both;">Quito, Ecuador — Electronic Music</span>
-      <h1 class="music-title" style="animation: fadeUp 0.8s cubic-bezier(0.0,0.0,0.2,1) 0.25s both;">DRIVE MEDIA DJ</h1>
-      <p class="music-subtitle" style="animation: fadeUp 0.8s cubic-bezier(0.0,0.0,0.2,1) 0.35s both;">Arquitectura sonora desde las sombras.</p>
-      <p class="music-bio" style="animation: fadeUp 0.8s cubic-bezier(0.0,0.0,0.2,1) 0.45s both;">
-        Desde Quito, Drive Media DJ explora los límites del sonido electrónico.
-        Progressive house de construcción lenta, minimal de arquitectura precisa
-        y techno de profundidad calculada. Una perspectiva latinoamericana
-        sobre la electrónica europea.
+
+      <div class="waveform-container" id="music-hero-waveform" aria-hidden="true">
+        <!-- Dynamic bars injected by premium.js -->
+      </div>
+
+      <span class="overline mono" style="animation: fadeUp 0.8s cubic-bezier(0.0,0.0,0.2,1) 0.1s both;"><span class="dot-accent"></span> Quito, Ecuador — Electronic Music</span>
+
+      <h1 class="dj-name" style="animation: fadeUp 0.8s cubic-bezier(0.0,0.0,0.2,1) 0.25s both;">DRIVE MEDIA DJ</h1>
+
+      <p class="music-subtitle" style="animation: fadeUp 0.8s cubic-bezier(0.0,0.0,0.2,1) 0.35s both;">
+        progressive life passion
       </p>
+
+      <div class="genre-pills">
+        <span class="genre-pill">Progressive House</span>
+        <span class="genre-pill">Minimal</span>
+        <span class="genre-pill">Techno</span>
+        <span class="genre-pill">Deep Tech</span>
+      </div>
+
+      <div class="dj-stats-row mono">
+        <div class="dj-stat">
+          <span class="dj-stat-val">128</span>
+          <span class="dj-stat-lbl">BPM promedio</span>
+        </div>
+        <div class="dj-stat">
+          <span class="dj-stat-val">EC</span>
+          <span class="dj-stat-lbl">Origen</span>
+        </div>
+        <div class="dj-stat">
+          <span class="dj-stat-val">4</span>
+          <span class="dj-stat-lbl">Géneros</span>
+        </div>
+        <div class="dj-stat">
+          <span class="dj-stat-val">2026</span>
+          <span class="dj-stat-lbl">Activo desde</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
 
-  <!-- MIXES — Añade nuevos .mix-item siguiendo el mismo patrón; iframes SoundCloud bajo demanda -->
+  <!-- BIO -->
+  <section class="content-section" id="bio">
+    <div class="container">
+      <div class="section-header">
+        <span class="overline mono reveal"><span class="dot-accent"></span> Acerca del artista</span>
+        <div class="accent-line reveal reveal-delay-1"></div>
+        <h2 class="reveal reveal-delay-2">El sonido de Drive.</h2>
+      </div>
+      <div class="bio-layout reveal">
+        <div>
+          <p class="music-bio" style="font-size:16px; line-height:1.75; color:rgba(194,194,194,0.85); margin-bottom:20px;">
+            Desde Quito, Drive Media DJ explora los límites del sonido electrónico con una perspectiva latinoamericana sobre la electrónica europea. Sets de construcción lenta, capas precisas y profundidad calculada que transportan al oyente a través de texturas y atmosferas.
+          </p>
+          <p class="music-bio" style="font-size:16px; line-height:1.75; color:rgba(194,194,194,0.65);">
+            El sonido es una extensión de la misma filosofía que guía a Drive Media como empresa tecnológica: precisión, autonomía e impacto. Cada mix es una arquitectura sonora construida con intención.
+          </p>
+        </div>
+        <div>
+          <p style="font-size:11px; color:rgba(194,194,194,0.35); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:16px;">Influencias</p>
+          <div class="card-tags" style="gap:8px;">
+            <span class="genre-pill" style="font-size:9px;">Guy J</span>
+            <span class="genre-pill" style="font-size:9px;">Hernan Cattaneo</span>
+            <span class="genre-pill" style="font-size:9px;">Nick Warren</span>
+            <span class="genre-pill" style="font-size:9px;">Sasha</span>
+            <span class="genre-pill" style="font-size:9px;">John Digweed</span>
+            <span class="genre-pill" style="font-size:9px;">Sebastien Leger</span>
+          </div>
+          <p style="font-size:11px; color:rgba(194,194,194,0.35); letter-spacing:0.2em; text-transform:uppercase; margin-bottom:16px; margin-top:32px;">Disponible para</p>
+          <div class="card-tags" style="gap:8px;">
+            <span class="card-tag">Bookings nacionales</span>
+            <span class="card-tag">Bookings internacionales</span>
+            <span class="card-tag">Festivales</span>
+            <span class="card-tag">Eventos privados</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SONIDO / GÉNEROS -->
+  <section class="content-section" id="sonido">
+    <div class="container">
+      <div class="section-header">
+        <span class="overline mono reveal"><span class="dot-accent"></span> El sonido</span>
+        <div class="accent-line reveal reveal-delay-1"></div>
+        <h2 class="reveal reveal-delay-2">Géneros &amp; estilos.</h2>
+      </div>
+    </div>
+    <div class="genre-cards">
+      <div class="genre-card">
+        <span class="genre-card-icon">◈</span>
+        <div class="genre-card-name">Progressive House</div>
+        <div class="genre-card-bpm">122–130 BPM</div>
+        <p class="genre-card-desc">Construcción lenta, atmósferas expansivas y drops que evolucionan en capas. El corazón del sonido Drive Media DJ.</p>
+      </div>
+      <div class="genre-card">
+        <span class="genre-card-icon">◇</span>
+        <div class="genre-card-name">Minimal</div>
+        <div class="genre-card-bpm">124–130 BPM</div>
+        <p class="genre-card-desc">Arquitectura de precisión. Cada elemento tiene propósito. El espacio en silencio es tan importante como el sonido.</p>
+      </div>
+      <div class="genre-card">
+        <span class="genre-card-icon">▲</span>
+        <div class="genre-card-name">Techno · Deep Tech</div>
+        <div class="genre-card-bpm">130–138 BPM</div>
+        <p class="genre-card-desc">Profundidad industrial. Ritmos hipnóticos y texturas oscuras que llevan el dancefloor a otro estado mental.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- MIXES -->
   <section class="content-section" id="mixes">
     <div class="container">
-
       <div class="section-header">
-        <span class="overline reveal">Sets &amp; Mixes</span>
+        <span class="overline mono reveal"><span class="dot-accent"></span> Sets &amp; Mixes</span>
         <div class="accent-line reveal reveal-delay-1"></div>
         <h2 class="reveal reveal-delay-2">Drive Selections.</h2>
       </div>
 
-      <div class="mixes-grid" id="mixes-list">
+      <div class="mixes-grid-premium">
 
-        <div class="mix-item reveal">
-          <div class="mix-label">
-            <span class="mix-number">001</span>
-            <span class="mix-title">Drive Selections #001</span>
+        <div class="mix-card reveal">
+          <div class="mix-card-header">
+            <div>
+              <div class="mix-card-title">Drive Selections #001</div>
+              <div class="mix-card-meta">
+                <span class="mix-meta-tag">Progressive House</span>
+                <span class="mix-meta-tag">62 min</span>
+              </div>
+            </div>
+            <span class="mix-card-num">001</span>
           </div>
           <div class="mix-embed-wrapper">
             <iframe
               src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/drivemediadj&color=%2389D9F8&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
-              height="120"
-              scrolling="no"
-              allow="autoplay"
-              title="Drive Selections #001"
+              height="120" scrolling="no" allow="autoplay" title="Drive Selections #001"
             ></iframe>
           </div>
-          <p style="font-size:13px; color:rgba(194,194,194,0.4); letter-spacing:0.06em; margin-top:8px;">
-            Progressive House · 62 min
-          </p>
         </div>
 
-        <div class="mix-item reveal reveal-delay-2">
-          <div class="mix-label">
-            <span class="mix-number">002</span>
-            <span class="mix-title">Drive Selections #002</span>
+        <div class="mix-card reveal reveal-delay-2">
+          <div class="mix-card-header">
+            <div>
+              <div class="mix-card-title">Drive Selections #002</div>
+              <div class="mix-card-meta">
+                <span class="mix-meta-tag">Minimal · Deep Tech</span>
+                <span class="mix-meta-tag">78 min</span>
+              </div>
+            </div>
+            <span class="mix-card-num">002</span>
           </div>
           <div class="mix-embed-wrapper">
             <iframe
               src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/drivemediadj&color=%2389D9F8&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"
-              height="120"
-              scrolling="no"
-              allow="autoplay"
-              title="Drive Selections #002"
+              height="120" scrolling="no" allow="autoplay" title="Drive Selections #002"
             ></iframe>
           </div>
-          <p style="font-size:13px; color:rgba(194,194,194,0.4); letter-spacing:0.06em; margin-top:8px;">
-            Minimal · Deep Tech · 78 min
-          </p>
         </div>
 
       </div>
-
     </div>
   </section>
 
 
-  <!-- PRESS KIT — Coloca el PDF en assets/presskit/ y actualiza la URL del enlace -->
+  <!-- PRESS KIT -->
   <section class="content-section" id="presskit">
     <div class="container">
-
       <div class="section-header">
-        <span class="overline reveal">Press Kit</span>
+        <span class="overline mono reveal"><span class="dot-accent"></span> Press Kit</span>
         <div class="accent-line reveal reveal-delay-1"></div>
         <h2 class="reveal reveal-delay-2">Para medios y promotores.</h2>
       </div>
 
-      <div class="presskit-block reveal">
-        <div class="presskit-info">
-          <h3>DRIVE MEDIA DJ</h3>
-          <p style="font-size:14px; color:rgba(194,194,194,0.6); margin-top:8px; line-height:1.6;">
-            Basado en Quito, Ecuador. Disponible para bookings nacionales e internacionales.
-          </p>
-          <p class="presskit-genres">
-            Progressive House · Minimal · Techno · Deep Tech
-          </p>
+      <div class="presskit-premium reveal">
+        <div class="presskit-premium-header">
+          <div class="presskit-soon-badge mono">⬡ Disponible para medios</div>
+          <div class="presskit-premium-title">DRIVE MEDIA DJ — Press Kit 2026</div>
+          <p class="presskit-premium-sub">Material de prensa oficial para promotores, medios y festivales. Incluye fotografía profesional, biografía oficial, rider técnico y material gráfico.</p>
         </div>
-        <a href="assets/presskit/drive-media-dj-presskit.pdf" class="btn-primary" download data-presskit>
-          Descargar Press Kit (PDF)
-        </a>
+
+        <div class="presskit-includes">
+          <div class="presskit-include-item">Fotografía profesional (alta resolución)</div>
+          <div class="presskit-include-item">Biografía oficial (ES / EN)</div>
+          <div class="presskit-include-item">Rider técnico de sonido</div>
+          <div class="presskit-include-item">Logo y assets de marca</div>
+          <div class="presskit-include-item">Links de mixes para prensa</div>
+          <div class="presskit-include-item">Géneros y especificaciones</div>
+          <div class="presskit-include-item">Datos de contacto y booking</div>
+          <div class="presskit-include-item">Historial de performances</div>
+        </div>
+
+        <div class="presskit-premium-footer">
+          <div class="presskit-contact">
+            Contacto para booking y prensa:<br>
+            <a href="mailto:info@drivemediadj.com" class="mono">info@drivemediadj.com</a>
+          </div>
+          <a href="assets/presskit/drive-media-dj-presskit.pdf" class="btn-primary" download data-presskit>
+            Descargar Press Kit (PDF)
+          </a>
+        </div>
       </div>
 
     </div>
   </section>
 
 
-  <!-- SOCIAL LINKS -->
+  <!-- SOCIAL / REDES -->
   <section class="content-section" id="social">
     <div class="container">
-
       <div class="section-header">
         <span class="overline reveal">Redes</span>
         <div class="accent-line reveal reveal-delay-1"></div>
         <h2 class="reveal reveal-delay-2">Seguir la señal.</h2>
       </div>
 
-      <div class="social-row reveal">
-        <a href="https://www.instagram.com/drivemedia.dj" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram @drivemedia.dj">
-          <svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16" fill="currentColor">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-          </svg>
-          @drivemedia.dj
+      <div class="social-links-premium reveal">
+        <a href="https://www.instagram.com/drivemedia.dj" class="social-link-premium" target="_blank" rel="noopener noreferrer">
+          <div class="social-link-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </div>
+          <div class="social-link-info">
+            <span class="social-link-name">Instagram</span>
+            <span class="social-link-handle">@drivemedia.dj</span>
+          </div>
         </a>
-        <a href="https://soundcloud.com/drivemediadj" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud drivemediadj">
-          <svg viewBox="0 0 24 24" aria-hidden="true" width="16" height="16" fill="currentColor">
-            <path d="M11.56 8.87V17h8.76c1.49 0 2.68-1.2 2.68-2.68 0-1.49-1.2-2.68-2.68-2.68-.09 0-.19 0-.28.01C19.88 9.6 18.58 8.5 17 8.5c-.36 0-.7.06-1.03.17C15.4 7.09 14.02 6 12.37 6c-.34 0-.68.05-1 .15M10.18 9.17c-.15-.04-.31-.06-.47-.06-1.14 0-2.08.82-2.21 1.93C7.08 11.1 6.6 11.7 6.6 12.4c0 .82.67 1.49 1.49 1.49h2.09V9.17z"/>
-          </svg>
-          soundcloud.com/drivemediadj
+        <a href="https://soundcloud.com/drivemediadj" class="social-link-premium" target="_blank" rel="noopener noreferrer">
+          <div class="social-link-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.56 8.87V17h8.76c1.49 0 2.68-1.2 2.68-2.68 0-1.49-1.2-2.68-2.68-2.68-.09 0-.19 0-.28.01C19.88 9.6 18.58 8.5 17 8.5c-.36 0-.7.06-1.03.17C15.4 7.09 14.02 6 12.37 6c-.34 0-.68.05-1 .15M10.18 9.17c-.15-.04-.31-.06-.47-.06-1.14 0-2.08.82-2.21 1.93C7.08 11.1 6.6 11.7 6.6 12.4c0 .82.67 1.49 1.49 1.49h2.09V9.17z"/></svg>
+          </div>
+          <div class="social-link-info">
+            <span class="social-link-name">SoundCloud</span>
+            <span class="social-link-handle">soundcloud.com/drivemediadj</span>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/company/drive-media-ec/" class="social-link-premium" target="_blank" rel="noopener noreferrer">
+          <div class="social-link-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div class="social-link-info">
+            <span class="social-link-name">LinkedIn</span>
+            <span class="social-link-handle">Drive Media EC</span>
+          </div>
+        </a>
+        <a href="https://www.facebook.com/drivemedia.ec/" class="social-link-premium" target="_blank" rel="noopener noreferrer">
+          <div class="social-link-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </div>
+          <div class="social-link-info">
+            <span class="social-link-name">Facebook</span>
+            <span class="social-link-handle">drivemedia.ec</span>
+          </div>
         </a>
       </div>
 
@@ -171,6 +309,7 @@
   <footer class="footer">
     <div class="footer-col footer-col-left">
       <p class="footer-copy">&copy; 2026 DRIVE MEDIA S.A.S<br>Quito, Ecuador.</p>
+      <p class="footer-brand-quote">"El futuro es construido, no esperado."</p>
     </div>
     <nav class="footer-col footer-col-center" aria-label="Footer navigation">
       <ul class="footer-nav">
@@ -183,15 +322,6 @@
     </nav>
     <div class="footer-col footer-col-right">
       <div class="footer-social">
-        <div class="footer-social-group">
-          <a href="https://www.linkedin.com/company/drive-media-ec/" class="footer-social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
-          <a href="https://www.facebook.com/drivemedia.ec/" class="footer-social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          </a>
-        </div>
-        <div class="footer-social-sep" aria-hidden="true"></div>
         <div class="footer-social-group">
           <a href="https://www.instagram.com/drivemedia.dj" class="footer-social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
@@ -207,6 +337,6 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/cursor.js"></script>
   <script src="assets/js/wave.js"></script>
-  <script src="assets/js/sphere.js"></script>
+  <script src="assets/js/premium.js"></script>
 </body>
 </html>

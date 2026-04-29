@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad — DRIVE MEDIA SAS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-bg: #0A0A0B;
+            --color-silver: #C2C2C2;
+            --color-cyan: #89D9F8;
+            --color-acid: #CFFD0F;
+            --color-white: #FFFFFF;
+            --color-dark-1: #141415;
+            --color-dark-2: #1A1A1B;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-silver);
+            font-family: 'DM Mono', monospace;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* HEADER / NAV */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 10, 11, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--color-dark-2);
+            padding: 16px 40px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: var(--color-white);
+            text-transform: uppercase;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--color-silver);
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin-left: 40px;
+            transition: color 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--color-cyan);
+        }
+
+        /* MAIN CONTENT */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 500;
+            color: var(--color-white);
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+        }
+
+        .updated {
+            font-size: 12px;
+            color: var(--color-cyan);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            display: block;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--color-white);
+            margin-top: 48px;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+            border-left: 2px solid var(--color-acid);
+            padding-left: 16px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--color-silver);
+        }
+
+        ul, ol {
+            margin-left: 32px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        strong {
+            color: var(--color-white);
+        }
+
+        a {
+            color: var(--color-cyan);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--color-acid);
+        }
+
+        .highlight {
+            background-color: rgba(207, 253, 15, 0.05);
+            border-left: 2px solid var(--color-acid);
+            padding: 16px;
+            padding-left: 20px;
+            margin: 24px 0;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .contact-box {
+            background-color: var(--color-dark-1);
+            border: 1px solid var(--color-dark-2);
+            padding: 32px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .contact-box p {
+            margin-bottom: 8px;
+        }
+
+        .contact-box a {
+            font-weight: 500;
+            color: var(--color-acid);
+        }
+
+        .contact-box a:hover {
+            color: var(--color-cyan);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--color-dark-1);
+            border-top: 1px solid var(--color-dark-2);
+            padding: 40px;
+            margin-top: 80px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--color-silver);
+            letter-spacing: 0.5px;
+        }
+
+        footer a {
+            color: var(--color-cyan);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--color-acid);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header {
+                padding: 16px 20px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+
+            main {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .contact-box {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">DRIVE MEDIA</div>
+            <div>
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="politica_privacidad.html" class="active">Privacidad</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Política de Privacidad</h1>
+        <span class="updated">Última actualización: Abril 2026</span>
+
+        <div class="section">
+            <h2>1. Introducción</h2>
+            <p>
+                <strong>DRIVE MEDIA SAS</strong> (en adelante, "la Empresa") está comprometida con la protección de tus datos personales y el respeto a tu privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, procesamos y protegemos tu información personal de conformidad con las leyes de protección de datos vigentes en Ecuador, incluyendo la Ley Orgánica de Protección de Datos Personales (LOPDP) y normativas internacionales.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>2. Responsable del Tratamiento de Datos</h2>
+            <p>
+                <strong>Razón Social:</strong> DRIVE MEDIA SAS<br>
+                <strong>Domicilio:</strong> Quito, Ecuador<br>
+                <strong>Email de contacto:</strong> <a href="mailto:gerencia@drivemediadj.com">gerencia@drivemediadj.com</a><br>
+                <strong>Dominio:</strong> drivemediadj.com
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>3. Datos Personales que Recopilamos</h2>
+            <p>Recopilamos datos personales únicamente cuando es necesario para proporcionar nuestros servicios y cumplir con obligaciones legales.</p>
+            <ul>
+                <li><strong>Datos de Contacto:</strong> Nombre, correo electrónico, número de teléfono (si proporcionas).</li>
+                <li><strong>Datos de Navegación:</strong> Dirección IP, navegador, tipo de dispositivo, páginas visitadas, tiempo de permanencia.</li>
+                <li><strong>Cookies:</strong> Identificadores de sesión para mejorar tu experiencia de navegación.</li>
+                <li><strong>Datos de Formularios:</strong> Información que completas voluntariamente en formularios de contacto o consultas.</li>
+                <li><strong>Datos Profesionales:</strong> Si eres cliente B2B: información de tu organización, cargo, datos de facturación.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Base Legal para el Tratamiento</h2>
+            <p>Procesamos tus datos personales sobre las siguientes bases legales:</p>
+            <ul>
+                <li><strong>Consentimiento:</strong> Para fines de marketing, boletines informativos y análisis de comportamiento.</li>
+                <li><strong>Ejecución de Contrato:</strong> Para prestar los servicios que hemos contratado contigo.</li>
+                <li><strong>Obligación Legal:</strong> Para cumplir con normativas tributarias, laborales y de protección de datos en Ecuador.</li>
+                <li><strong>Interés Legítimo:</strong> Para mejorar nuestros servicios, prevenir fraude y garantizar la seguridad de nuestras plataformas.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. Finalidades del Tratamiento</h2>
+            <p>Utilizamos tus datos personales para:</p>
+            <ul>
+                <li>Proporcionar, mantener y mejorar nuestros servicios tecnológicos.</li>
+                <li>Responder a tus consultas y solicitudes.</li>
+                <li>Enviar información sobre productos, servicios, actualizaciones (si has dado consentimiento).</li>
+                <li>Cumplir con obligaciones fiscales, legales y administrativas en Ecuador.</li>
+                <li>Análisis de datos agregados para entender mejor el uso de nuestros servicios.</li>
+                <li>Prevención de fraude, seguridad y protección de derechos.</li>
+                <li>Contactarte para propósitos comerciales o de networking (solo con consentimiento previo).</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. Compartición de Datos</h2>
+            <p>No vendemos ni compartimos tus datos personales con terceros sin tu consentimiento explícito, excepto en los siguientes casos:</p>
+            <ul>
+                <li><strong>Autoridades Competentes:</strong> Cuando la ley lo requiera (SRI, autoridades judiciales, etc.).</li>
+                <li><strong>Proveedores de Servicios:</strong> Empresas que nos asisten en hosting, email marketing, y análisis de datos (bajo acuerdos de confidencialidad).</li>
+                <li><strong>Socios Comerciales:</strong> En caso de fusión, adquisición o transferencia de activos (previa notificación).</li>
+                <li><strong>Seguridad y Cumplimiento:</strong> Cuando sea necesario para proteger derechos, privacidad o seguridad.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. Retención de Datos</h2>
+            <p>
+                Conservamos tus datos personales solo durante el tiempo necesario para:
+            </p>
+            <ul>
+                <li><strong>Clientes Activos:</strong> Mientras dure la relación contractual + 2 años (por obligaciones tributarias en Ecuador).</li>
+                <li><strong>Prospectos/Leads:</strong> Máximo 1 año, salvo que des consentimiento para mantenerlos en campañas de marketing.</li>
+                <li><strong>Datos de Navegación (Cookies):</strong> Hasta 1 año o hasta que borres tus cookies del navegador.</li>
+                <li><strong>Solicitudes de Contacto:</strong> 6 meses, luego son eliminados de forma segura.</li>
+            </ul>
+            <p>
+                Después de estos períodos, eliminamos tus datos de forma segura, salvo donde la ley requiera conservarlos más tiempo.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>8. Derechos de los Titulares de Datos</h2>
+            <p>De conformidad con la LOPDP y leyes de privacidad, tienes derecho a:</p>
+            <ul>
+                <li><strong>Acceso:</strong> Solicitar copia de tus datos personales.</li>
+                <li><strong>Rectificación:</strong> Corregir datos inexactos o incompletos.</li>
+                <li><strong>Eliminación:</strong> Solicitar la supresión de tus datos (derecho al olvido) bajo ciertas condiciones.</li>
+                <li><strong>Restricción del Tratamiento:</strong> Limitar cómo usamos tus datos.</li>
+                <li><strong>Portabilidad:</strong> Recibir tus datos en formato estructurado e intercambiable.</li>
+                <li><strong>Oposición:</strong> Rechazar el tratamiento de tus datos con fines de marketing o análisis.</li>
+                <li><strong>Revocar Consentimiento:</strong> Retirar tu consentimiento en cualquier momento.</li>
+            </ul>
+            <p>
+                Para ejercer estos derechos, contáctanos en <a href="mailto:gerencia@drivemediadj.com">gerencia@drivemediadj.com</a> con "SOLICITUD DE DATOS PERSONALES" en el asunto.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>9. Seguridad de Datos</h2>
+            <p>
+                Implementamos medidas técnicas y organizacionales robustas para proteger tus datos personales contra acceso no autorizado, alteración o destrucción:
+            </p>
+            <ul>
+                <li>Encriptación SSL/TLS en todas las conexiones al sitio web.</li>
+                <li>Almacenamiento seguro en servidores con acceso restringido.</li>
+                <li>Contraseñas hasheadas y protecciones contra inyección SQL.</li>
+                <li>Auditorías de seguridad periódicas.</li>
+                <li>Restricción de acceso solo a personal autorizado.</li>
+            </ul>
+            <p>
+                <strong>Nota:</strong> Aunque implementamos medidas de seguridad rigurosas, ningún sistema es 100% seguro. Si detectamos una brecha de datos, te notificaremos de acuerdo con la ley.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>10. Cookies y Tecnologías de Rastreo</h2>
+            <p>
+                Utilizamos cookies y similares tecnologías para:
+            </p>
+            <ul>
+                <li>Mantener tu sesión activa.</li>
+                <li>Recordar preferencias de navegación.</li>
+                <li>Analizar el uso del sitio (Google Analytics).</li>
+                <li>Proporcionar publicidad dirigida (si das consentimiento).</li>
+            </ul>
+            <p>
+                Puedes gestionar cookies desde tu navegador. Al continuar navegando, aceptas el uso de cookies esenciales. Las cookies de marketing y análisis requieren consentimiento explícito.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>11. Enlaces a Sitios Terceros</h2>
+            <p>
+                Nuestro sitio puede contener enlaces a sitios web de terceros. No somos responsables de sus políticas de privacidad. Te recomendamos leer las políticas de privacidad de cualquier sitio que visites.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>12. Cambios a Esta Política</h2>
+            <p>
+                Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Los cambios significativos serán comunicados por email o mediante aviso prominente en el sitio. Tu continuación del uso del sitio tras cambios implica aceptación de la política actualizada.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>13. Cumplimiento Legal Ecuador</h2>
+            <p>
+                Esta política está diseñada para cumplir con:
+            </p>
+            <ul>
+                <li><strong>Ley Orgánica de Protección de Datos Personales (LOPDP)</strong> de Ecuador.</li>
+                <li><strong>Código Tributario</strong> — obligaciones de retención de registros.</li>
+                <li><strong>Ley Orgánica de Emprendimiento e Innovación</strong> — para SAS.</li>
+                <li>Estándares de ciberseguridad y buenas prácticas internacionales.</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <strong>Transferencias Internacionales:</strong> Utilizamos proveedores de servicios globales (como Google Cloud, Netlify). Aseguramos transferencias seguras mediante cláusulas contractuales estándar y evaluaciones de riesgo.
+        </div>
+
+        <div class="section">
+            <h2>14. Contacto y Reclamaciones</h2>
+            <p>
+                Si tienes preguntas sobre esta política, deseas ejercer tus derechos, o deseas presentar una reclamación:
+            </p>
+        </div>
+
+        <div class="contact-box">
+            <p><strong>DRIVE MEDIA SAS</strong></p>
+            <p>Email: <a href="mailto:gerencia@drivemediadj.com">gerencia@drivemediadj.com</a></p>
+            <p>Web: <a href="https://drivemediadj.com">drivemediadj.com</a></p>
+            <p style="margin-top: 16px; font-size: 12px; color: var(--color-cyan);">
+                Responderemos en máximo 30 días hábiles.
+            </p>
+        </div>
+
+        <p style="margin-top: 60px; font-size: 12px; text-align: center; color: var(--color-dark-2);">
+            Si consideras que tu derecho a la protección de datos ha sido vulnerado, puedes presentar una reclamación ante la <strong>Autoridad de Protección de Datos Personales</strong> de Ecuador.
+        </p>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DRIVE MEDIA SAS. Todos los derechos reservados.</p>
+        <p style="margin-top: 16px;">
+            <a href="politica_privacidad.html">Política de Privacidad</a> · 
+            <a href="index.html">Inicio</a> · 
+            <a href="contacto.html">Contacto</a>
+        </p>
+    </footer>
+</body>
+</html>
