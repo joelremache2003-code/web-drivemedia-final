@@ -1,0 +1,11 @@
+# OS / sistema
+.DS_Store
+*.log
+
+# Artefactos de desarrollo (NO son parte del sitio web)
+_dev/screenshots/
+tmp/
+
+# Editores
+.vscode/
+.idea/

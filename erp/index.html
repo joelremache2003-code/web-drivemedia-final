@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ridet OS — el sistema de gestión para talleres, concesionarios y comercios de repuestos en Ecuador. Inventario, órdenes de taller, facturación electrónica SRI y CRM en una sola plataforma." />
+  <meta name="theme-color" content="#0A0A0B" />
+  <title>Ridet OS — El sistema que pone a rodar tu negocio automotriz</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ridet OS — ERP Automotriz hecho en Ecuador" />
+  <meta property="og:description" content="Inventario, taller, facturación SRI y clientes en una sola plataforma. Deja atrás el Excel." />
+  <meta property="og:image" content="assets/img/emblem.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/erp.css" />
+  <link rel="icon" type="image/png" href="assets/img/emblem.png" />
+
+  <!-- GSAP -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- Grain overlay (fixed, pointer-events none) -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ====================================================== NAV ====================================================== -->
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#inicio" class="nav-brand" aria-label="Ridet OS — Inicio">
+        <img src="assets/img/emblem.png" alt="" class="nav-emblem" width="40" height="40" decoding="async" />
+        <span class="nav-word" data-brand>Ridet<span class="nav-word-accent"> OS</span></span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#producto">Producto</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#casos">Casos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <a href="#contacto" class="btn btn-acid nav-cta" data-content="nav.cta">Agendar demo</a>
+
+      <button class="nav-burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile overlay -->
+  <div class="nav-overlay" aria-hidden="true">
+    <ul class="nav-overlay-links" role="list">
+      <li><a href="#producto">Producto</a></li>
+      <li><a href="#beneficios">Beneficios</a></li>
+      <li><a href="#como-funciona">Cómo funciona</a></li>
+      <li><a href="#casos">Casos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#contacto" class="btn btn-acid">Agendar demo</a></li>
+    </ul>
+  </div>
+
+
+  <!-- ====================================================== HERO (light) ====================================================== -->
+  <section class="hero section-light" id="inicio">
+    <div class="container hero-grid">
+
+      <div class="hero-copy">
+        <span class="eyebrow" data-content="hero.eyebrow">ERP Automotriz · Hecho en Ecuador</span>
+        <h1 class="hero-title display" data-content="hero.title">El sistema que pone a rodar tu negocio automotriz.</h1>
+        <p class="hero-sub" data-content="hero.subtitle">Inventario, taller, facturación electrónica SRI y clientes en una sola plataforma. Deja atrás el Excel y los cuadernos: opera con datos en tiempo real y decide con números, no con suposiciones.</p>
+
+        <div class="hero-actions">
+          <a href="#contacto" class="btn btn-acid btn-lg">
+            <span data-content="hero.ctaPrimary">Agenda una demo</span>
+            <span class="btn-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </a>
+          <a href="#como-funciona" class="btn btn-ghost btn-lg" data-content="hero.ctaSecondary">Ver cómo funciona</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num display" data-content="hero.stats.0.num">−38%</span>
+            <span class="hero-stat-label" data-content="hero.stats.0.label">tiempo en facturación</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num display" data-content="hero.stats.1.num">+25%</span>
+            <span class="hero-stat-label" data-content="hero.stats.1.label">rotación de repuestos</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num display" data-content="hero.stats.2.num">100%</span>
+            <span class="hero-stat-label" data-content="hero.stats.2.label">comprobantes SRI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-orb"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <img src="assets/img/emblem.png" alt="" class="hero-emblem" data-content-src="hero.image" />
+        <div class="hero-grid-lines"></div>
+      </div>
+
+    </div>
+    <a href="#producto" class="hero-scroll" aria-label="Desplázate">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+    </a>
+  </section>
+
+
+  <!-- ====================================================== ABOUT (light cream) ====================================================== -->
+  <section class="about section-cream" id="producto">
+    <div class="container about-grid">
+      <div class="about-left reveal">
+        <span class="eyebrow" data-content="about.eyebrow">Quiénes somos</span>
+        <p class="about-lead" data-content="about.lead">Ridet OS es desarrollado por Drive Media S.A.S, una empresa de tecnología en Quito enfocada en software de operación real para el sector automotriz ecuatoriano.</p>
+        <p class="about-body" data-content="about.body">No adaptamos un ERP genérico. Construimos una plataforma pensada desde la operación diaria de talleres, concesionarios, lubricadoras y comercios de repuestos en Ecuador: cumplimiento tributario, control de inventario y trazabilidad por vehículo, sin complejidad innecesaria.</p>
+      </div>
+      <div class="about-right">
+        <h2 class="about-display display reveal" data-content="about.display">Software que entiende cómo trabaja un taller.</h2>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================== BENEFITS / BENTO (light) ====================================================== -->
+  <section class="benefits section-light" id="beneficios">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-content="benefits.eyebrow">Lo que resuelve</span>
+        <h2 class="section-title display reveal" data-content="benefits.title">Todo tu negocio, en un solo lugar.</h2>
+        <p class="section-lead reveal reveal-d1" data-content="benefits.subtitle">Seis módulos que reemplazan hojas de cálculo, cuadernos y sistemas desconectados.</p>
+      </div>
+
+      <div class="bento stagger">
+        <article class="bezel benefit-card reveal">
+          <div class="bezel-inner">
+            <div class="benefit-top"><span class="benefit-tag mono" data-content="benefits.items.0.tag">01</span>
+              <span class="benefit-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div>
+            <h3 class="benefit-title" data-content="benefits.items.0.title">Inventario y repuestos</h3>
+            <p class="benefit-desc" data-content="benefits.items.0.desc">Control de stock en tiempo real, kardex, ubicaciones y alertas de mínimos. Sabes qué tienes, qué falta y qué te deja margen.</p>
+          </div>
+        </article>
+
+        <article class="bezel benefit-card reveal reveal-d1">
+          <div class="bezel-inner">
+            <div class="benefit-top"><span class="benefit-tag mono" data-content="benefits.items.1.tag">02</span>
+              <span class="benefit-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div>
+            <h3 class="benefit-title" data-content="benefits.items.1.title">Órdenes de taller</h3>
+            <p class="benefit-desc" data-content="benefits.items.1.desc">Recepción de vehículos, asignación de técnicos y seguimiento de reparaciones con historial completo por placa y VIN.</p>
+          </div>
+        </article>
+
+        <article class="bezel benefit-card reveal reveal-d2">
+          <div class="bezel-inner">
+            <div class="benefit-top"><span class="benefit-tag mono" data-content="benefits.items.2.tag">03</span>
+              <span class="benefit-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div>
+            <h3 class="benefit-title" data-content="benefits.items.2.title">Facturación electrónica SRI</h3>
+            <p class="benefit-desc" data-content="benefits.items.2.desc">Comprobantes electrónicos autorizados, notas de crédito y retenciones, integrados con el SRI. Cumple sin papeleo manual.</p>
+          </div>
+        </article>
+
+        <article class="bezel benefit-card reveal">
+          <div class="bezel-inner">
+            <div class="benefit-top"><span class="benefit-tag mono" data-content="benefits.items.3.tag">04</span>
+              <span class="benefit-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div>
+            <h3 class="benefit-title" data-content="benefits.items.3.title">Clientes y vehículos (CRM)</h3>
+            <p class="benefit-desc" data-content="benefits.items.3.desc">Ficha de cada cliente y su vehículo, recordatorios de mantenimiento y postventa que vuelven a traer al cliente.</p>
+          </div>
+        </article>
+
+        <article class="bezel benefit-card reveal reveal-d1">
+          <div class="bezel-inner">
+            <div class="benefit-top"><span class="benefit-tag mono" data-content="benefits.items.4.tag">05</span>
+              <span class="benefit-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div>
+            <h3 class="benefit-title" data-content="benefits.items.4.title">Ventas y cotizaciones</h3>
+            <p class="benefit-desc" data-content="benefits.items.4.desc">Cotiza en segundos, convierte a factura con un clic y controla los márgenes de cada venta y servicio.</p>
+          </div>
+        </article>
+
+        <article class="bezel benefit-card reveal reveal-d2">
+          <div class="bezel-inner">
+            <div class="benefit-top"><span class="benefit-tag mono" data-content="benefits.items.5.tag">06</span>
+              <span class="benefit-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span></div>
+            <h3 class="benefit-title" data-content="benefits.items.5.title">Reportes y tablero</h3>
+            <p class="benefit-desc" data-content="benefits.items.5.desc">Dashboards de ventas, rentabilidad, inventario y productividad del taller. La foto real de tu negocio, cada día.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================== HOW IT WORKS (dark, pinned flow) ====================================================== -->
+  <section class="how section-dark" id="como-funciona">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow eyebrow-light" data-content="how.eyebrow">Cómo funciona</span>
+        <h2 class="section-title display reveal" data-content="how.title">De caos a control en cuatro pasos.</h2>
+      </div>
+    </div>
+
+    <div class="how-inner">
+      <div class="container how-stage">
+        <div class="how-steps">
+          <div class="how-step is-active" data-step="0">
+            <span class="how-step-num mono" data-content="how.steps.0.num">01</span>
+            <h3 data-content="how.steps.0.title">Diagnóstico</h3>
+            <p data-content="how.steps.0.desc">Entendemos tu operación —taller, concesionario, lubricadora o repuestos— y definimos qué módulos necesitas desde el día uno.</p>
+          </div>
+          <div class="how-step" data-step="1">
+            <span class="how-step-num mono" data-content="how.steps.1.num">02</span>
+            <h3 data-content="how.steps.1.title">Configuración</h3>
+            <p data-content="how.steps.1.desc">Parametrizamos inventario, facturación SRI, usuarios y permisos a la medida de tu negocio.</p>
+          </div>
+          <div class="how-step" data-step="2">
+            <span class="how-step-num mono" data-content="how.steps.2.num">03</span>
+            <h3 data-content="how.steps.2.title">Migración y capacitación</h3>
+            <p data-content="how.steps.2.desc">Cargamos tus datos actuales y entrenamos a tu equipo hasta que dominen la plataforma.</p>
+          </div>
+          <div class="how-step" data-step="3">
+            <span class="how-step-num mono" data-content="how.steps.3.num">04</span>
+            <h3 data-content="how.steps.3.title">Operación y soporte</h3>
+            <p data-content="how.steps.3.desc">Sales en vivo con soporte continuo. Crecemos contigo y el sistema se adapta a tu operación.</p>
+          </div>
+        </div>
+
+        <div class="how-visuals" aria-hidden="true">
+          <div class="how-visual is-active" data-visual="0"><span class="how-visual-num display">01</span></div>
+          <div class="how-visual" data-visual="1"><span class="how-visual-num display">02</span></div>
+          <div class="how-visual" data-visual="2"><span class="how-visual-num display">03</span></div>
+          <div class="how-visual" data-visual="3"><span class="how-visual-num display">04</span></div>
+          <img src="assets/img/emblem.png" alt="" class="how-visual-emblem" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================== DISRUPTIVE CTA (deep black) ====================================================== -->
+  <section class="discta section-black">
+    <div class="discta-orb" aria-hidden="true"></div>
+    <img src="assets/img/emblem.png" alt="" class="discta-emblem" data-content-src="cta.image" aria-hidden="true" />
+    <div class="container discta-inner">
+      <span class="eyebrow eyebrow-light reveal" data-content="cta.eyebrow">El cambio</span>
+      <h2 class="discta-title display reveal reveal-d1" data-content="cta.title">El Excel ya no sostiene tu taller.</h2>
+      <p class="discta-sub reveal reveal-d2" data-content="cta.subtitle">Cada hoja de cálculo desconectada es dinero que no ves y tiempo que no recuperas. Pon tu operación en una sola plataforma.</p>
+      <a href="#contacto" class="btn btn-acid btn-lg reveal reveal-d3">
+        <span data-content="cta.button">Agenda tu demo gratis</span>
+        <span class="btn-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </span>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ====================================================== TESTIMONIALS (light) ====================================================== -->
+  <section class="testimonials section-cream" id="casos">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-content="testimonials.eyebrow">Lo que dicen</span>
+        <h2 class="section-title display reveal" data-content="testimonials.title">Negocios que ya ruedan con Ridet OS.</h2>
+      </div>
+
+      <div class="tcards stagger">
+        <article class="bezel tcard reveal">
+          <div class="bezel-inner">
+            <div class="tcard-head">
+              <span class="tcard-logo" data-content="testimonials.items.0.company">Logo</span>
+              <span class="tcard-quotemark" aria-hidden="true">”</span>
+            </div>
+            <p class="tcard-quote" data-content="testimonials.items.0.quote">REEMPLAZAR — pega aquí tu testimonio real (texto, nombre, cargo y empresa).</p>
+            <div class="tcard-author">
+              <span class="tcard-name" data-content="testimonials.items.0.name">Tu cliente real</span>
+              <span class="tcard-role" data-content="testimonials.items.0.role">Cargo · Empresa</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="bezel tcard reveal reveal-d1">
+          <div class="bezel-inner">
+            <div class="tcard-head">
+              <span class="tcard-logo" data-content="testimonials.items.1.company">Motor Sur</span>
+              <span class="tcard-quotemark" aria-hidden="true">”</span>
+            </div>
+            <p class="tcard-quote" data-content="testimonials.items.1.quote">Antes cerrábamos caja a mano y nunca cuadraba. Ahora facturamos al SRI en segundos y sé exactamente cuánto deja cada orden de taller.</p>
+            <div class="tcard-author">
+              <span class="tcard-name" data-content="testimonials.items.1.name">Andrés Villacís</span>
+              <span class="tcard-role" data-content="testimonials.items.1.role">Gerente · Taller Motor Sur</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="bezel tcard reveal reveal-d2">
+          <div class="bezel-inner">
+            <div class="tcard-head">
+              <span class="tcard-logo" data-content="testimonials.items.2.company">Lubricadora La Y</span>
+              <span class="tcard-quotemark" aria-hidden="true">”</span>
+            </div>
+            <p class="tcard-quote" data-content="testimonials.items.2.quote">El control de repuestos cambió el negocio. Dejamos de perder ventas por falta de stock y de comprar lo que no rota.</p>
+            <div class="tcard-author">
+              <span class="tcard-name" data-content="testimonials.items.2.name">Karina Espinoza</span>
+              <span class="tcard-role" data-content="testimonials.items.2.role">Propietaria · Lubricadora La Y</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================== CONTACT (dark split) ====================================================== -->
+  <section class="contact section-dark" id="contacto">
+    <div class="container contact-grid">
+
+      <div class="contact-aside reveal">
+        <span class="eyebrow eyebrow-light" data-content="contact.eyebrow">Hablemos</span>
+        <h2 class="contact-title display" data-content="contact.title">Agenda una demo de Ridet OS.</h2>
+        <p class="contact-sub" data-content="contact.subtitle">Cuéntanos de tu negocio y te mostramos cómo Ridet OS ordena tu operación. Sin compromiso.</p>
+
+        <div class="contact-direct">
+          <a href="https://calendly.com/drive-media/demo" target="_blank" rel="noopener" class="contact-link" data-content-href="contact.calendly">
+            <span class="contact-link-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+            <span data-content="contact.calendlyLabel">Agendar demo</span>
+          </a>
+          <a href="https://wa.me/593990000000" target="_blank" rel="noopener" class="contact-link" data-content-href="contact.whatsapp">
+            <span class="contact-link-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 20l1.4-4.2A8.5 8.5 0 1 1 21 11.5z"/></svg></span>
+            <span data-content="contact.whatsappLabel">Escríbenos por WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="bezel contact-formwrap reveal reveal-d1">
+        <form class="contact-form bezel-inner" id="erp-form" novalidate>
+          <div class="field">
+            <label for="f-name" data-content="contact.formName">Nombre</label>
+            <input type="text" id="f-name" name="name" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="f-email" data-content="contact.formEmail">Email</label>
+            <input type="email" id="f-email" name="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="f-company" data-content="contact.formCompany">Empresa</label>
+            <input type="text" id="f-company" name="empresa" autocomplete="organization" />
+          </div>
+          <div class="field">
+            <label for="f-msg" data-content="contact.formMessage">Cuéntanos sobre tu negocio</label>
+            <textarea id="f-msg" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-acid btn-block">
+            <span data-content="contact.formSubmit">Solicitar demo</span>
+            <span class="btn-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          </button>
+          <p class="form-note mono">Respuesta en menos de 24 horas · Sin spam</p>
+        </form>
+        <div class="form-success bezel-inner" hidden>
+          <span class="form-success-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <h3 data-content="contact.successTitle">¡Recibido!</h3>
+          <p data-content="contact.successText">Gracias. Te contactamos en menos de 24 horas para coordinar tu demo.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ====================================================== FOOTER ====================================================== -->
+  <footer class="footer section-black">
+    <div class="container">
+      <div class="foot-cta bezel">
+        <div class="bezel-inner foot-cta-inner">
+          <div>
+            <h2 class="foot-cta-title display" data-content="footer.ctaTitle">Hablemos de tu operación.</h2>
+            <p class="foot-cta-text" data-content="footer.ctaText">El mejor momento para ordenar tu negocio fue ayer. El segundo mejor es hoy.</p>
+          </div>
+          <a href="#contacto" class="btn btn-dark btn-lg">
+            <span data-content="footer.ctaButton">Agendar demo</span>
+            <span class="btn-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="foot-main">
+        <div class="foot-brand">
+          <a href="#inicio" class="nav-brand">
+            <img src="assets/img/emblem.png" alt="" class="nav-emblem" width="36" height="36" />
+            <span class="nav-word" data-brand>Ridet<span class="nav-word-accent"> OS</span></span>
+          </a>
+          <p class="foot-tagline" data-content="footer.tagline">Ridet OS — operación automotriz sin fricción. Un producto de Drive Media S.A.S, Quito, Ecuador.</p>
+        </div>
+
+        <nav class="foot-links" aria-label="Enlaces del sitio">
+          <span class="foot-links-head mono">Producto</span>
+          <a href="#beneficios">Beneficios</a>
+          <a href="#como-funciona">Cómo funciona</a>
+          <a href="#casos">Casos</a>
+        </nav>
+
+        <nav class="foot-links" aria-label="Próximamente">
+          <span class="foot-links-head mono">Pronto</span>
+          <span class="foot-soon">Comunidad</span>
+          <span class="foot-soon">Centro de ayuda</span>
+          <span class="foot-soon">Soporte</span>
+        </nav>
+
+        <nav class="foot-links" aria-label="Legal">
+          <span class="foot-links-head mono">Legal</span>
+          <a href="politica-privacidad.html">Política de privacidad</a>
+          <a href="terminos-uso.html">Términos de uso</a>
+          <a href="cookies.html">Cookies</a>
+        </nav>
+      </div>
+
+      <div class="foot-bottom">
+        <span class="foot-copy mono" data-content="footer.copyright">© 2026 Drive Media S.A.S — Quito, Ecuador.</span>
+        <div class="foot-social" id="foot-social">
+          <a href="https://www.linkedin.com/company/drive-media-ec/" target="_blank" rel="noopener" aria-label="LinkedIn" class="foot-social-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/drivemedia.ec/" target="_blank" rel="noopener" aria-label="Facebook" class="foot-social-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M24 12.07C24 5.44 18.63.07 12 .07S0 5.44 0 12.07c0 5.99 4.39 10.95 10.13 11.85v-8.38H7.08v-3.47h3.05V9.43c0-3.01 1.79-4.67 4.53-4.67 1.31 0 2.69.24 2.69.24v2.95H15.8c-1.49 0-1.96.93-1.96 1.87v2.25h3.33l-.53 3.47h-2.8v8.38C19.61 23.02 24 18.06 24 12.07z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/drivemedia.ec" target="_blank" rel="noopener" aria-label="Instagram" class="foot-social-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85C2.38 3.93 3.9 2.39 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zm0-2.16C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C19.81 2.69 17.39.27 13.03.07 11.75.01 11.34 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+          </a>
+          <a href="https://wa.me/593990000000" target="_blank" rel="noopener" aria-label="WhatsApp" class="foot-social-link">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.74-.86-2-.96-.27-.1-.46-.15-.66.15-.2.3-.76.96-.93 1.16-.17.2-.34.22-.64.07a8.2 8.2 0 0 1-2.4-1.48 9 9 0 0 1-1.67-2.07c-.17-.3 0-.46.13-.6.13-.14.3-.34.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.66-1.6-.9-2.18-.24-.57-.48-.5-.66-.5l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.74-.71 1.98-1.4.25-.69.25-1.28.17-1.4-.07-.13-.27-.2-.57-.35zM12.05 21.7h-.01a9.6 9.6 0 0 1-4.88-1.34l-.35-.2-3.62.94.97-3.53-.23-.36a9.6 9.6 0 1 1 8.12 4.49zM12.05 0a11.97 11.97 0 0 0-10.2 18.3L0 24l5.85-1.53A11.97 11.97 0 1 0 12.05 0z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script defer src="assets/js/erp.js"></script>
+</body>
+</html>

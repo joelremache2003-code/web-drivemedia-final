@@ -1,6 +1,6 @@
 /* ============================================================
-   DRIVE MEDIA SAS — Core Styles v2.0
-   Brand: Syne + DM Mono / #0A0A0B / #CFFD0F / #89D9F8
+   DRIVE MEDIA SAS — Core Styles v2.1
+   Brand: Syne + DM Mono / #F8F8F8 / #0071E3 / #5AC8FA
    ============================================================ */
 
 /* --- Fonts --- */
@@ -9,18 +9,18 @@
 /* --- Variables --- */
 :root {
   /* Colors */
-  --dm-bg:      #0A0A0B;
-  --dm-bg-alt:  #111112;
-  --dm-silver:  #C2C2C2;
-  --dm-cyan:    #89D9F8;
-  --dm-acid:    #CFFD0F;
-  --dm-white:   #FFFFFF;
+  --dm-bg:      #F8F8F8;
+  --dm-bg-alt:  #FFFFFF;
+  --dm-silver:  #6E6E73;
+  --dm-cyan:    #0071E3;
+  --dm-acid:    #0071E3;
+  --dm-white:   #1D1D1F;
   
   /* Gradients & Glassmorphism */
-  --glass-bg:   rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --acid-glow:  rgba(207, 253, 15, 0.15);
-  --cyan-glow:  rgba(137, 217, 248, 0.15);
+  --glass-bg:   rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --acid-glow:  rgba(0, 113, 227, 0.15);
+  --cyan-glow:  rgba(90, 200, 250, 0.15);
 
   /* Easings */
   --ease-out:    cubic-bezier(0.0, 0.0, 0.2, 1);

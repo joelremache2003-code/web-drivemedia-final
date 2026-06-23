@@ -1,0 +1,164 @@
+{
+  "_instructions": "Edita este archivo para cambiar textos, imágenes y enlaces de la landing SIN tocar el código. Las claves siguen la estructura seccion.campo. Las imágenes y enlaces se referencian por ruta relativa a /erp/. En la Fase 2 un panel editará este mismo archivo.",
+
+  "meta": {
+    "productName": "Ridet OS",
+    "company": "Drive Media S.A.S",
+    "tagline": "ERP Automotriz"
+  },
+
+  "nav": {
+    "cta": "Agendar demo"
+  },
+
+  "hero": {
+    "eyebrow": "ERP Automotriz · Hecho en Ecuador",
+    "title": "El sistema que pone a rodar tu negocio automotriz.",
+    "subtitle": "Inventario, taller, seguimiento de tus clientes en una sola plataforma. Deja atrás el Excel y los cuadernos: opera con datos en tiempo real y decide con números, no con suposiciones.",
+    "ctaPrimary": "Agenda una demo",
+    "ctaSecondary": "Ver cómo funciona",
+    "image": "assets/img/emblem.png",
+    "stats": [
+      { "num": "−38%", "label": "tiempo en facturación" },
+      { "num": "+25%", "label": "rotación de repuestos" },
+      { "num": "100%", "label": "comprobantes autorizados SRI" }
+    ]
+  },
+
+  "about": {
+    "eyebrow": "Quiénes somos",
+    "lead": "Ridet OS es desarrollado por Drive Media S.A.S, una empresa de tecnología en Quito enfocada en software de operación real para el sector automotriz ecuatoriano.",
+    "display": "Software que entiende cómo trabaja un taller.",
+    "body": "No adaptamos un ERP genérico. Construimos una plataforma pensada desde la operación diaria de talleres, concesionarios, lubricadoras y comercios de repuestos en Ecuador: cumplimiento tributario, control de inventario y trazabilidad por vehículo, sin complejidad innecesaria."
+  },
+
+  "benefits": {
+    "eyebrow": "Lo que resuelve",
+    "title": "Todo tu negocio, en un solo lugar.",
+    "subtitle": "Seis módulos que reemplazan hojas de cálculo, cuadernos y sistemas desconectados.",
+    "items": [
+      {
+        "tag": "01",
+        "title": "Inventario y repuestos",
+        "desc": "Control de stock en tiempo real, kardex, ubicaciones y alertas de mínimos. Sabes qué tienes, qué falta y qué te deja margen."
+      },
+      {
+        "tag": "02",
+        "title": "Órdenes de taller",
+        "desc": "Recepción de vehículos, asignación de técnicos y seguimiento de reparaciones con historial completo por placa y VIN."
+      },
+      {
+        "tag": "03",
+        "title": "Facturación electrónica SRI",
+        "desc": "Comprobantes electrónicos autorizados, notas de crédito y retenciones, integrados con el SRI. Cumple sin papeleo manual."
+      },
+      {
+        "tag": "04",
+        "title": "Clientes y vehículos (CRM)",
+        "desc": "Ficha de cada cliente y su vehículo, recordatorios de mantenimiento y postventa que vuelven a traer al cliente."
+      },
+      {
+        "tag": "05",
+        "title": "Ventas y cotizaciones",
+        "desc": "Cotiza en segundos, convierte a factura con un clic y controla los márgenes de cada venta y servicio."
+      },
+      {
+        "tag": "06",
+        "title": "Reportes y tablero",
+        "desc": "Dashboards de ventas, rentabilidad, inventario y productividad del taller. La foto real de tu negocio, cada día."
+      }
+    ]
+  },
+
+  "how": {
+    "eyebrow": "Cómo funciona",
+    "title": "De caos a control en cuatro pasos.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Diagnóstico",
+        "desc": "Entendemos tu operación —taller, concesionario, lubricadora o repuestos— y definimos qué módulos necesitas desde el día uno."
+      },
+      {
+        "num": "02",
+        "title": "Configuración",
+        "desc": "Parametrizamos inventario, facturación SRI, usuarios y permisos a la medida de tu negocio."
+      },
+      {
+        "num": "03",
+        "title": "Migración y capacitación",
+        "desc": "Cargamos tus datos actuales y entrenamos a tu equipo hasta que dominen la plataforma."
+      },
+      {
+        "num": "04",
+        "title": "Operación y soporte",
+        "desc": "Sales en vivo con soporte continuo. Crecemos contigo y el sistema se adapta a tu operación."
+      }
+    ]
+  },
+
+  "cta": {
+    "eyebrow": "El cambio",
+    "title": "El Excel ya no sostiene tu taller.",
+    "subtitle": "Cada hoja de cálculo desconectada es dinero que no ves y tiempo que no recuperas. Pon tu operación en una sola plataforma.",
+    "button": "Agenda tu demo gratis",
+    "image": "assets/img/emblem.png"
+  },
+
+  "testimonials": {
+    "eyebrow": "Lo que dicen",
+    "title": "Negocios que ya ruedan con Ridet OS.",
+    "items": [
+      {
+        "quote": "Desde que utilizamos Ridet OS, nuestra productividad en el taller aumento drasticamente, ya no estamos operando a ciegas sino con valores y datos reales",
+        "name": "Diego Toledo",
+        "role": "Gerente General · TG Motors",
+        "company": "TG Motors"
+      },
+      {
+        "quote": "Antes cerrábamos caja a mano y nunca cuadraba. Ahora facturamos al SRI en segundos y sé exactamente cuánto deja cada orden de taller.",
+        "name": "Andrés Villacís",
+        "role": "Gerente · Taller Motor Sur",
+        "company": "Motor EC"
+      },
+      {
+        "quote": "El control de repuestos cambió el negocio. Dejamos de perder ventas por falta de stock y de comprar lo que no rota.",
+        "name": "Karina Espinoza",
+        "role": "Propietaria · Lubricadora La Y",
+        "company": "Lubricadora Los Alamos"
+      }
+    ]
+  },
+
+  "contact": {
+    "eyebrow": "Hablemos",
+    "title": "Agenda una demo de Ridet OS.",
+    "subtitle": "Cuéntanos de tu negocio y te mostramos cómo Ridet OS ordena tu operación. Sin compromiso.",
+    "email": "info@drivemediadj.com",
+    "calendly": "https://calendly.com/drive-media/demo",
+    "calendlyLabel": "Agendar demo",
+    "whatsapp": "https://wa.me/593999648041",
+    "whatsappLabel": "Escríbenos por WhatsApp",
+    "formName": "Nombre",
+    "formEmail": "Email",
+    "formCompany": "Empresa",
+    "formMessage": "Cuéntanos sobre tu negocio",
+    "formSubmit": "Solicitar demo",
+    "successTitle": "¡Recibido!",
+    "successText": "Gracias. Te contactamos en menos de 24 horas para coordinar tu demo."
+  },
+
+  "footer": {
+    "ctaTitle": "Hablemos de tu operación.",
+    "ctaText": "El mejor momento para ordenar tu negocio fue ayer. El segundo mejor es hoy.",
+    "ctaButton": "Agendar demo",
+    "tagline": "Ridet OS — operación automotriz sin fricción. Un producto de Drive Media S.A.S, Quito, Ecuador.",
+    "socials": [
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/company/drive-media-ec/" },
+      { "label": "Facebook", "href": "https://www.facebook.com/drivemedia.ec/" },
+      { "label": "Instagram", "href": "https://www.instagram.com/drivemedia.ec" },
+      { "label": "WhatsApp", "href": "https://wa.me/593999648041" }
+    ],
+    "copyright": "© 2026 Drive Media S.A.S — Quito, Ecuador."
+  }
+}
