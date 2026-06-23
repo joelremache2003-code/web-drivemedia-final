@@ -1,6 +1,6 @@
 /* ============================================================
-   DRIVE MEDIA SAS — Stylesheet v1.1
-   Brand: DM Mono / #F8F8F8 / #0071E3 / #5AC8FA / #6E6E73 / #1D1D1F
+   DRIVE MEDIA SAS — Stylesheet v1.0
+   Brand: DM Mono / #0A0A0B / #CFFD0F / #89D9F8 / #C2C2C2 / #FFFFFF
    ============================================================ */
 
 /* --- Reset & Base ----------------------------------------- */
@@ -11,14 +11,11 @@
 }
 
 :root {
-  --dm-bg:      #F8F8F8;
-  --dm-bg-alt:  #FFFFFF;
-  --dm-bg-gradient: linear-gradient(135deg, #FAFAFA 0%, #F0F0F0 50%, #E8E8E8 100%);
-  --dm-silver:  #6E6E73;
-  --dm-silver-light: #86868B;
-  --dm-cyan:    #0071E3;
-  --dm-acid:    #0071E3;
-  --dm-white:   #1D1D1F;
+  --dm-bg:      #0A0A0B;
+  --dm-silver:  #C2C2C2;
+  --dm-cyan:    #89D9F8;
+  --dm-acid:    #CFFD0F;
+  --dm-white:   #FFFFFF;
   --dm-black:   #000000;
 
   --ease-out:    cubic-bezier(0.0, 0.0, 0.2, 1);
@@ -28,10 +25,10 @@
 
   --max-w:   1200px;
   --pad-x:   80px;
-  --pad-y:   140px;
+  --pad-y:   140px; /* Slightly more breathable */
 
-  --glass: rgba(255, 255, 255, 0.8);
-  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
 }
 
 html {
@@ -41,13 +38,16 @@ html {
 
 body {
   background-color: var(--dm-bg);
-  background: var(--dm-bg-gradient);
   color: var(--dm-silver);
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 400;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px; /* Pronounced grid like the references */
 }
 
 .hero-iridescent-text {
@@ -56,11 +56,11 @@ body {
   text-transform: uppercase;
   background: linear-gradient(
     90deg, 
-    #0071E3 0%, 
-    #5AC8FA 25%, 
-    #0071E3 50%, 
-    #5AC8FA 75%, 
-    #0071E3 100%
+    #89D9F8 0%, 
+    #CFFD0F 25%, 
+    #89D9F8 50%, 
+    #CFFD0F 75%, 
+    #89D9F8 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -739,15 +739,15 @@ a {
   position: relative;
   width: 340px;
   height: 340px;
-  background: radial-gradient(circle, #E8E8E8 0%, #D4D4D4 100%);
-  border: 8px solid #C7C7C7;
+  background: radial-gradient(circle, #1a1a1c 0%, #0a0a0b 100%);
+  border: 8px solid #141416;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   box-shadow: 
-    0 0 50px rgba(0,0,0,0.15),
-    inset 0 0 30px rgba(0,113,227,0.05);
+    0 0 50px rgba(0,0,0,0.8),
+    inset 0 0 30px rgba(207,253,15,0.05);
   position: relative;
 }
 
@@ -2622,7 +2622,10 @@ header a {
   font-weight: 700 !important;
   letter-spacing: -0.03em !important;
   line-height: 1.0 !important;
-  color: var(--dm-white);
+  background: linear-gradient(135deg, #ffffff 0%, rgba(137,217,248,0.9) 50%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* --- Hero overline badge ---------------------------------- */
